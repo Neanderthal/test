@@ -16,7 +16,7 @@ class Parent(object):
         
     @isSecond.setter
     def isSecond(self, value):
-        raise AttributeError('isSecond')
+        raise AttributeError('isSecond is not accepted values')
       
 
 class First(Parent):
