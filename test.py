@@ -18,9 +18,9 @@ def test():
     assert(b.isSecond == 1)
 
     assert(isinstance(a, First))
-    # assert(isinstance(b, Second))
+    assert(isinstance(b, Second))
     assert(isinstance(a, Parent))
-    # assert(isinstance(b, Parent))
+    assert(isinstance(b, Parent))
 
     try:
         a.fnc(7)
