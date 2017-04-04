@@ -8,11 +8,11 @@ class MyError(Exception):
 
 class Parent(object):
     def isFirst(self):
-        return 1
+        raise NotImplementedError
     
     @property
     def isSecond(self):
-        return 0
+        return not self.isFirst()
         
     @isSecond.setter
     def isSecond(self, value):
@@ -21,22 +21,14 @@ class Parent(object):
 
 class First(Parent):
     def isFirst(self):
-        return 1
+        return True
     
-    @property
-    def isSecond(self):
-        return 0
-        
 
 
 class Second(Parent):
     def isFirst(self):
-        return 0
+        return False
 
-    @property
-    def isSecond(self):
-        return 1
-    
     
 class A(First):
     def __init__(self):
