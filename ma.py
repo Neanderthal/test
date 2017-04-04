@@ -4,6 +4,18 @@ class MyError(Exception):
     def __str__(self):
         return self.value
 
+class Parent(object):
+    def isFirst(self):
+        return 1
+    
+    @property
+    def isSecond(self):
+        return 0
+        
+    @my_attr.setter
+    def isSecond(self, value):
+        raise AttributeError('isSecond')
+      
 
 class First(Parent):
     def isFirst(self):
@@ -24,10 +36,9 @@ class Second(Parent):
     
     @property
     def isSecond(self, value):
-        raise AttributeError('isSecond')
+        return 0
     
-    pass
-
+    
 class A(First):
     def __init__(self):
         self.i = 3
