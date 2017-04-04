@@ -1,4 +1,9 @@
-class B(object):
+# -*- coding: utf-8 -*-
+
+from ma import Second
+
+
+class B(Second):
     def __init__(self, b1):
         self.tempfive = b1
 
